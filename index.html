@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/vendor.css">
+</head>
+
+<body>
+
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header no-print">
+        <!-- <h1>
+            Sales Order
+        </h1> -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content no-print">
+        <div style="position: sticky;top: 0;z-index: 1000;">
+            <div class="main-header">
+                <div class="main-header-leftside" style="display: flex;">
+                    <div class="add-sale">Add Sale</div>
+                    <div class="location-container">
+                        <i class="bi bi-geo-alt-fill" style="font-size: 14px; padding-left: 6px;"></i>
+                        <div class="all-location">All locations</div>
+                        <div class="blue-container">
+                            <i class="bi bi-arrow-down" style="color: white; text-align: center; font-size: 12px;"></i>
+                        </div>
+
+
+                    </div>
+                    <div class="location-container">
+                        <i class="bi bi-geo-alt-fill" style="font-size: 14px; padding-left: 6px;"></i>
+                        <div class="all-location">Selling Price</div>
+                        <div class="blue-container">
+                            <i class="bi bi-arrow-down" style="color: white; text-align: center; font-size: 12px;"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="main-header-rightside" style="display: flex;
+            justify-content: end;
+            width: 40%;
+            align-items: end;">
+                    <button class="saveas-btn">
+                        <div class="saveas-btn-text" style="width: 90px;color: rgb(0, 0, 0);">Save as Draft</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #0C3959;color: white;width: 115px;">
+                        <div class="saveas-btn-text">Save and Print</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #008D4C;color: rgb(255, 255, 255);width: 80px;">
+                        <div class="saveas-btn-text">Save</div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <!-- Customer Details -->
+        <div class="gap"></div>
+        <div class="container-fluid" style="padding: 30px;">
+            <div class="row">
+                <div class="col col-lg-6">
+                    <div class="subhead-text">Invoice Details</div>
+
+
+
+
+                    <div class="customer-details-main-container">
+                        <div style="display: flex;justify-content: space-between; width: 100%;">
+                            <!-- customer details -->
+                            <div style="width: 60%;">
+
+
+                                <div class="subhead-text">Customer Details</div>
+                                <div class="search-container">
+
+                                    <i class="search-icon bi bi-search"></i>
+                                    <input type="text" id="searchBox" placeholder="Select or Add a Customer"
+                                        class="search-box">
+                                    <i class="dropdown-arrow bi bi-arrow-down"></i>
+                                    <div id="dropdownMenu" class="dropdown-content">
+                                        <div onclick="show_address_details();" class="drop_one">
+                                            <p class="text-customer-p">TestCustomer (9946051204)</p>
+                                            <p class="text-customer-p-p">TEST1234 Test Company</p>
+                                        </div>
+                                        <div class="drop_one">Drop One</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- payment method -->
+                            <div style="width: 28%;">
+
+
+                                <div class="subhead-text">Pay term</div>
+                                <div class="search-container_1">
+
+                                    <div id="searchBox_1" style="display: flex;align-items: center;">
+
+                                        <div
+                                            style="color: #646464; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">
+                                            Pay term</div>
+
+                                        <div class="vertical-line"></div>
+
+                                        <div
+                                            style="color: #646464; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">
+                                            Day</div>
+                                        <i class="dropdown-arrow bi bi-arrow-down"></i>
+                                    </div>
+                                    <!-- <input type="text" id="searchBox_1" placeholder="Pay term"  class="search-box_1"> -->
+
+
+
+                                    <div id="dropdownMenu_1" class="dropdown-content_1">
+                                        <a href="#">Drop One</a>
+                                        <a href="#">Drop Two</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- showing details -->
+                    <div id="address-details-dt" class="address-details-dt" style="margin-top: 10px;">
+
+
+
+                        <div style="margin:10px;">
+
+                            <div class="button-container">
+                                <button class="test-company">
+                                    Test Company <i class="bi bi-x"></i>
+                                </button>
+                                <div class="dialog-box">
+                                    <p>Amz Address p. o <i class="bi bi-pencil-square"></i> </p>
+                                </div>
+                            </div>
+
+                            <p class="sub_sub_address">Shipping Address : <span class="sub-txt"> Valiya Vilakom
+                                    Perumguzhi P. o </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- popup show box container -->
+
+
+
+
+
+
+                <div class="col col-lg-6">
+                    <div class="subhead-text">Invoice Details</div>
+
+
+
+                    <div class="invoice-container">
+                        <div style="display: flex;justify-content: space-between;align-items: center;">
+
+
+
+                            <div class="subtext_1">
+                                Invoice No
+
+                                <input type="text" id="searchBox_invoice" placeholder="Select or Add a Customer"
+                                    class="search-box">
+                            </div>
+                            <div class="subtext_1">
+                                Invoice Template
+
+
+
+                                <div class="custom-search-container">
+                                    <span class="customer_select">Select or Add a Customer</span>
+                                    <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                                    <div class="custom-dropdown-content">
+                                        <a href="#">Customer One</a>
+                                        <a href="#">Customer Two</a>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="subtext_1">
+                                Invoice Scheme
+
+                                <div class="custom-search-container">
+                                    <span class="customer_select">Select or Add Another Customer</span>
+                                    <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                                    <div class="custom-dropdown-content">
+                                        <a href="#">Customer Three</a>
+                                        <a href="#">Customer Four</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- sales invoce date -->
+
+
+                    <div class="invoice-container" style="margin-top: 15px;">
+                        <div style="display: flex;justify-content: space-between;align-items: center;">
+                            <div class="subtext_1">
+                                Sale Date
+
+                                <div class="datepicker_0"
+                                    style="position: relative;border: 1px solid rgba(105, 102, 102, 0.5);padding: 0px; width: 95%;">
+                                    <input type="text" name="" id="date_0" class="ctm-input" placeholder="choose date">
+                                </div>
+                            </div>
+                            <div class="subtext_1">
+                                Delivery Date
+
+
+
+                                <div class="datepickerr"
+                                    style="position: relative;border: 1px solid rgba(105, 102, 102, 0.5);padding: 0px;width: 95%;">
+
+                                    <input type="text" name="" id="datee" class="ctm-input" placeholder="choose date">
+
+                                </div>
+
+
+
+                                <!-- <input type="text" id="searchBox_invoice" placeholder="Select or Add a Customer" /
+                                class="search-box"> -->
+                            </div>
+                            <div class="subtext_1">
+                                Extended Delivery Date
+                                <div class="datepickerrr"
+                                    style="position: relative;border: 1px solid rgba(105, 102, 102, 0.5);padding: 0px;width: 95%;">
+                                    <input type="text" name="" id="dateee" class="ctm-input" placeholder="choose date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="subhead-text">Other Headers</div>
+            <div class="other-header" style="padding: 20px;">
+                <div style="display: flex;">
+
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container_8_7_77">
+                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container_8_7_77">
+                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Excel Sheet Box -->
+            <div style="display: flex; justify-content: space-between; margin-top: 20px">
+                <div class="subhead-text">Other Headers</div>
+                <div style="display: flex; align-items: center;">
+                    <fieldset style="margin-right: 10px;">
+
+                        <div>
+                            <input type="checkbox" id="addColumnButton" name="interest" value="coding" />
+
+                            <label for="coding" class="dis">Show Description</label>
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <input type="checkbox" id="music" name="interest" value="music" />
+                            <label for="music" class="dis">Show Description</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+
+
+            <!-- exal main container -->
+
+
+
+
+            <div style="    width: 100%;
+            /* height: 300px; */
+            background: white;
+            border-radius: 9px;
+            border: 1px #C4C4C4 solid;
+            padding: 15px;">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!-- Table tr  -->
+
+
+                        <div style="    display: flex;
+                        justify-content: center;
+                        margin-top: 10px;
+                        margin-bottom: 23px;">
+
+                            <div class="scrollable-container">
+                                <!-- Content goes here -->
+
+
+
+                                <table id="items_table" border="1">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                style="width: 75px; border-right: none;border-bottom: none;position: static;">
+                                                <span class="table-head">
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+
+                                            <th style="width: 300px;border-left: none;"> <span
+                                                    class="table-head">Product
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 120px;"> <span class="table-head">Qty
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Remarks
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Unit Price
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width:250px;"><span class="table-head">Discount
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 250px;"><span class="table-head">Tax
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Price inc.tax
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Subtotal
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+
+                                    </tbody>
+                                </table>
+
+                                <table id="template" style="display: none;">
+                                    <tbody>
+                                        <tr class="item_row ::animate::" draggable="true" data-id="::id::"
+                                            data-parent="::parent_id::" data-deep="::deep_id::">
+                                            <td>
+                                                <a class="custom_action_btn cursor-pointer add_sub_row"><i
+                                                        class="fa fa-plus-circle"></i></a>
+                                            </td>
+                                            <td>
+                                                <div class="cell-content">
+                                                    <div style="display: flex; align-items: center;">
+                                                        <a class="items_expand"><i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                    <input type="text" placeholder="Data 1.1"
+                                                        class="input-field cell-input-tag">
+                                                    <div>
+                                                        <div class="toggle-button" onclick="toggleButton(this)"
+                                                            style="background-color: rgb(204, 204, 204);">
+                                                            <div class="toggle-circle" style="left: 1px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="button-counter">
+                                                    <button class="decrement-btn">-</button>
+                                                    <input type="number"
+                                                        class="count-value input-field cell-input-tag text-center"
+                                                        value="1">
+                                                    <button class="increment-btn">+</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Data 3.1"
+                                                    class="input-field cell-input-tag">
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Data 4.1"
+                                                    class="input-field cell-input-tag">
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Data 5.1"
+                                                    class="input-field cell-input-tag">
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Data 6.1"
+                                                    class="input-field cell-input-tag">
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Data 7.1"
+                                                    class="input-field cell-input-tag">
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Data 8.1"
+                                                    class="input-field cell-input-tag">
+                                                <a class=" cursor-pointer delete_row"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="search-container_in">
+                                    <button class="add_the_row">+ Add</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class=" col col-lg-6">
+
+                            <div class="discount-box">
+
+                                <div style="display: flex;">
+                                    <div class="subtext_1">
+                                        Invoice Template
+                                        <div class="custom-search-container_8_7_77">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="subtext_1">
+                                        Invoice Template
+                                        <div class="custom-search-container_8_7_77">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="subtext_1">
+                                        Invoice Template
+                                        <div class="custom-search-container_8_7_77">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subtext_1" style="margin-top: 10px;">
+                                    Sell Note
+                                </div>
+                                <textarea class="test-area" placeholder="Enter your test here..."></textarea>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6">
+                            <div class="discount-box_2">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="sub">Sub total</div>
+                                    <div class="sub">0</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;margin-top:10px ;">
+                                    <div class="sub_1" style="margin-bottom:10px ;">Discount</div>
+                                    <div class="sub">0</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="subtext_1">
+                                        <div class="custom-search-container">
+                                            <span class="customer_select">Select or Add Another Customer</span>
+                                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                                            <div class="custom-dropdown-content">
+                                                <a href="#">Customer Three</a>
+                                                <a href="#">Customer Four</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sub">0</div>
+                                </div>
+
+                                <div style="display: flex;margin-top:10px ;">
+
+                                    <div class="subtext_1">
+
+                                        <div class="custom-search-container_8_7_777">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+                                        </div>
+                                    </div>
+                                    <div class="subtext_1">
+
+                                        <div class="custom-search-container_8_7_777">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="sub">0</div>
+                                </div>
+
+                                <div
+                                    style="width: 100%; height: 1px;margin-top:10px ;margin-bottom:10px ; background: white; border-radius: 3.11px">
+                                </div>
+
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="total-amt">Total Payable ( ₹ )</div>
+                                    <div class="sub">0</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping details -->
+
+            <div class="container-fluid" style="margin-top: 10px;">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <div class="subhead-text" style="margin-bottom: 10px;margin-top : 10px;">Shipping Details
+                        </div>
+                        <div class="shiping-details">
+
+                            <div style="display: flex;">
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subtext_1" style="margin-top: 10px;">
+                                Sell Note
+                            </div>
+                            <textarea class="test-area" placeholder="Enter your test here..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="col col-lg-6">
+                        <div class="subhead-text" style="margin-bottom: 10px;margin-top : 10px;">Shipping Details
+                        </div>
+                        <div class="shiping-details">
+
+                            <div style="display: flex;">
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subtext_1" style="margin-top: 10px;">
+                                Sell Note
+                            </div>
+                            <textarea class="test-area" placeholder="Enter your test here..."></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div style="height: 50px;"></div>
+        <div style="position: sticky;bottom: 0;z-index: 1000;">
+            <div class="main-header">
+                <div class="main-header-leftside" style="display: flex;width:60%;">
+                    <div class="add-sale">tootal</div>
+
+                    <div class="add-sale"> ₹300</div>
+                </div>
+                <div class="main-header-rightside" style="display: flex;
+            justify-content: end;
+            width: 40%;
+            align-items: end;">
+                    <button class="saveas-btn">
+                        <div class="saveas-btn-text" style="width: 90px;color: rgb(0, 0, 0);">Save as Draft.</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #0C3959;color: white;width: 115px;">
+                        <div class="saveas-btn-text">Save and Print</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #008D4C;color: rgb(255, 255, 255);width: 80px;">
+                        <div class="saveas-btn-text">Save</div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="contextMenu_1" class="context-menu" style="display: none;">
+            <ul>
+                <li id="deleteRow">Delete Row</li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- /.content -->
+    <!-- @stop
+    @section('css') -->
+    <style>
+        .delete_row {
+            position: absolute;
+            z-index: 649;
+            right: 5px;
+        }
+
+        a.items_expand {
+            padding: 0 8px;
+        }
+
+        tr.item_row[data-parent="null"] {
+            background: #ffede0;
+        }
+
+        input.input-field {
+            background: none;
+        }
+    </style>
+
+
+
+    <style>
+        #myTable th,
+        #myTable td {
+            text-align: left;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            border-right: none;
+            border-left: none;
+            padding-left: 8px;
+            border: 1px solid #ddd;
+            /* padding: 8px; */
+            text-align: left;
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 300px;
+            color: '#1E1E1E';
+            font-size: 13px;
+            font-family: Poppins;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        th {
+            position: relative;
+            border-top: 1px solid #dddddd00;
+            border-right: 1px solid #cbc5c5fa;
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #dddddd00;
+        }
+
+        .add-sale {
+            color: #0C3959;
+            font-size: 20px;
+            font-family: Poppins;
+            font-weight: 500;
+            word-wrap: break-word;
+            margin-left: 20px;
+        }
+
+        .all-location {
+            color: black;
+            font-size: 12px;
+            font-family: Poppins;
+            font-weight: 500;
+            word-wrap: break-word;
+            padding-right: 58px
+        }
+
+        .blue-container {
+
+            margin: 0;
+            padding: 17px;
+            background: #0C3959;
+            border-radius: 141.02px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .saveas-btn {
+            background: white;
+            border-radius: 6px;
+            border: 1px #C9C9C9 solid;
+            padding: 8px;
+            margin-left: 10%;
+        }
+
+        .saveas-btn-text {
+            font-size: 12px;
+            font-weight: 600;
+            word-wrap: break-word
+        }
+
+        /* customer details */
+
+        .customer-details-main-container {
+            background: #DBF0FF;
+            border-radius: 9px;
+            padding: 20px;
+        }
+
+        .sub {
+            text-align: end;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        #searchBox {
+            width: 100%;
+            padding-left: 33px;
+            padding-right: 30px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+            color: #646464;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e7f3ed;
+            min-width: 100%;
+            border: 1px solid #ccc;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 2px;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 13px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .dropdown-arrow {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #0C3959;
+            pointer-events: none;
+        }
+
+
+        .search-container_1 {
+            position: relative;
+        }
+
+        #searchBox_1 {
+            width: 100%;
+            padding: 7px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+            /* padding: 8px; */
+            color: #646464;
+            font-size: .7rem;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+
+        .dropdown-content_1 {
+            display: none;
+            position: absolute;
+            background-color: #e7f3ed;
+            min-width: 100%;
+            border: 1px solid #ccc;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 2px;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .vertical-line {
+            border-left: 1px solid rgba(0, 0, 0, 0.411);
+            height: 18px;
+            margin-left: 35px;
+            padding-right: 8px;
+        }
+
+        .subhead-text {
+            color: #0C3959;
+            font-size: .9rem;
+            font-family: Poppins;
+            font-weight: 600;
+            word-wrap: break-word
+        }
+
+        textarea {
+            width: 100%;
+            height: 57px;
+            background: white;
+            border-radius: 3.11px;
+            border: none;
+            resize: none;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .invoice-container {
+            width: 100%;
+            background: #fff;
+            border-radius: 9px;
+            padding: 20px;
+        }
+
+        .subtext_1 {
+            width: 100%;
+            color: #646464;
+            font-size: 13px;
+            font-weight: 500;
+            word-wrap: break-word;
+
+        }
+
+        .ctm-input {
+            width: 100%;
+            outline: none;
+            border: none;
+            font-size: 11px;
+            font-weight: 400;
+            padding: 5px;
+        }
+
+
+
+        #searchBox_invoice {
+            width: 95%;
+            padding-left: 12px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+            color: #646464;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .custom-search-container {
+            position: relative;
+            width: 95%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 33px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .custom-search-container span {
+            flex: 1;
+        }
+
+        .custom-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            border: none;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 2px;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+
+        .custom-dropdown-arrow {
+            font-size: 12px;
+            color: #030303;
+            pointer-events: none;
+            margin: 0px 0px 0px 10px;
+        }
+
+        .customer_select {
+            color: #646464;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .custom-search-container_8_7_77 {
+            position: relative;
+            width: 95%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 33px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .custom-search-container_8_7_77 span {
+            flex: 1;
+        }
+
+        .test-area {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .other-header {
+            width: 100%;
+            background: #fff;
+            border-radius: 9px
+        }
+
+        .dis {
+            color: black;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .discount-box {
+            width: 100%;
+            background: #fff;
+            border-radius: 3px;
+            padding: 20px;
+        }
+
+        .discount-box_2 {
+            width: 100%;
+            border-radius: 3px;
+            padding: 20px;
+            background: #DBF0FF;
+        }
+
+        .discount-box_2 .sub {
+            color: #0C3959;
+            font-size: 12px;
+            font-weight: 700;
+            word-wrap: break-word;
+
+        }
+
+        .discount-box_2 .sub_1 {
+            color: #0C3959;
+            font-size: 12px;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        .custom-search-container_8_7_777 {
+            position: relative;
+            width: 89%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 33px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        .custom-search-container_8_7_77 span {
+            flex: 1;
+        }
+
+        .total-amt {
+            color: #0C3959;
+            font-size: 12px;
+            font-weight: 700;
+            word-wrap: break-word
+        }
+
+        .shiping-details {
+            width: 100%;
+            background: #fff;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        @media screen and (max-height: 1400px) {
+            .vertical-line {
+                border-left: 1px solid rgba(0, 0, 0, 0.411);
+                height: 18px;
+                margin-left: 20px;
+                padding-right: 8px;
+            }
+
+        }
+
+        .scrollable-container {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: relative;
+        }
+
+        .search-container_in {
+            position: sticky;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+
+        .cell-content {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+
+
+        .address-details-dt {
+            width: 100%;
+            background: #DBF0FF;
+            padding: 1px;
+            border-radius: 8px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease, display 0s 0.5s;
+        }
+
+        .location-container {
+            margin-left: 10px;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            width: 205px;
+            background: white;
+            border-radius: 85.02px;
+            border: 0.73px #0C3959 solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 100%;
+        }
+    </style>
+
+
+    <style>
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            background: #f1f1f1;
+            padding: 11px 0px 11px 0px;
+        }
+
+        /*table*/
+
+        th,
+        td {
+            border: 1px solid #c3c3c3;
+            /* padding: 8px; */
+            text-align: left;
+            position: relative;
+            white-space: nowrap;
+            /* Prevent text wrapping */
+            overflow: hidden;
+            /* Hide overflow text */
+            text-overflow: ellipsis;
+            /* Show ellipsis for overflow text */
+            width: 150px;
+
+            color: '#1E1E1E';
+            font-size: 13.82;
+            font-family: 'Poppins';
+            font-weight: '500';
+
+        }
+
+        th {
+            background-color: #f2f2f2;
+            position: relative;
+        }
+
+
+        .resizer {
+            width: 5px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: col-resize;
+            user-select: none;
+            background-color: transparent;
+        }
+
+        button {
+            /* margin-top: 10px; */
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 25px;
+        }
+
+        .table-head {
+            color: #646464;
+            font-size: 13px;
+            font-family: Poppins;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        .search-container_in {
+            margin-left: 0px;
+            background: transparent;
+            padding: 0;
+            border-color: white;
+            font-size: 12px;
+
+        }
+
+
+        input.input-field.cell-input-tag {
+            width: 100%;
+            /* height: 100%; */
+            padding: 0px;
+            margin: 0px;
+            border: #ffffff;
+        }
+
+        .context-menu {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            z-index: 1;
+        }
+
+        button.decrement-btn {
+            background: blue;
+            color: white;
+            /* width: 48px; */
+            /* height: 18px; */
+            line-height: 0px;
+            border-radius: 4px;
+            padding: 10px;
+            margin-right: 8px;
+            margin-left: 8px;
+
+        }
+
+        .increment-btn {
+            background: blue;
+            color: white;
+            /* width: 48px; */
+            /* height: 18px; */
+            line-height: 0px;
+            border-radius: 4px;
+            padding: 10px;
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+
+
+        .context-menu {
+            position: absolute;
+
+            z-index: 1000;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-counter {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+
+    <!-- @endsection
+    @section('javascript') -->
+
+
+    <script src="/js/vendor.js"></script>
+    <script>
+
+        $id = 1;
+        function createRow(parent = null) {
+            $row = $('#template').find('tbody').html();
+            $row = $row.replace(/::id::/g, $id++);
+            $row = $row.replace(/::parent_id::/g, parent);
+            $row = $row.replace(/::animate::/g, 'animate__animated animate__fadeIn');
+
+            if (parent) {
+                $p_deep = $('tr[data-id="' + parent + '"]').data('deep')
+                $row = $row.replace(/::deep_id::/g, $p_deep + 1);
+                $('tr[data-id="' + parent + '"]').after($row);
+                expandRow(parent);
+            }
+            else {
+                $row = $row.replace(/::deep_id::/g, 1);
+                $('#items_table').find('tbody').append($row);
+            }
+
+            fixIndent();
+            return $row;
+        }
+
+        function deleteRow($id) {
+            $tr = $('tr[data-id="' + $id + '"]');
+
+            if ($tr.length > 0) {
+                $tr_childs = $('tr[data-parent="' + $id + '"]');
+                if ($tr_childs.length > 0) {
+                    $tr_childs.each(function () {
+                        deleteRow($(this).data('id'));
+                    })
+                }
+            }
+            $('tr[data-id="' + $id + '"]').remove();
+            return true;
+
+        }
+
+        function collapseRow($id) {
+            $tr = $('tr[data-id="' + $id + '"]');
+            if ($tr.length > 0) {
+                $tr_childs = $('tr[data-parent="' + $id + '"]');
+                if ($tr_childs.length > 0) {
+                    $tr_childs.each(function () {
+                        collapseRow($(this).data('id'));
+                    })
+                }
+            }
+            $('tr[data-id="' + $id + '"]').hide();
+            return true;
+
+        }
+        function expandRow($id) {
+            $tr = $('tr[data-id="' + $id + '"]');
+            if ($tr.length > 0) {
+                $tr_childs = $('tr[data-parent="' + $id + '"]');
+                if ($tr_childs.length > 0) {
+                    $tr_childs.each(function () {
+                        expandRow($(this).data('id'));
+                    })
+                }
+            }
+            $('tr[data-id="' + $id + '"]').find('i').removeClass('fa-angle-right');
+            $('tr[data-id="' + $id + '"]').find('i').removeClass('fa-angle-down');
+            $('tr[data-id="' + $id + '"]').find('i').addClass('fa-angle-down');
+
+            $('tr[data-id="' + $id + '"]').show();
+            return true;
+
+        }
+
+        function fixIndent() {
+            $('.item_row').each(function () {
+                $deep = $(this).data('deep');
+                $(this).find('.cell-content').css('margin-left', 20 * ($deep - 1));
+
+            })
+        }
+
+        $('.add_the_row').on('click', function () {
+            $row = createRow();
+            // $('#items_table').find('tbody').append($row);
+        });
+
+        $(document).on('click', '.add_sub_row', function () {
+            $row = createRow($(this).closest('tr').data('id'));
+        });
+        $(document).on('click', '.delete_row', function () {
+            $this = $(this);
+
+            swal({
+                title: "Are you sure?",
+                text: "Delete Row",
+                icon: "warning",
+                buttons: [
+                    'No',
+                    'Yes'
+                ],
+                dangerMode: true,
+            }).then(function (isConfirm) {
+                if (isConfirm) {
+                    $row = deleteRow($this.closest('tr').data('id'));
+                }
+
+            });
+
+        });;
+
+        $(document).on('click', '.items_expand', function () {
+            if ($(this).find('i').hasClass('fa-angle-down')) {
+                $(this).find('i').removeClass('fa-angle-down');
+                $(this).find('i').addClass('fa-angle-right');
+                collapseRow($(this).closest('tr').data('id'));
+                $(this).closest('tr').show();
+            }
+            else {
+                $(this).find('i').addClass('fa-angle-down');
+                $(this).find('i').removeClass('fa-angle-right');
+
+                expandRow($(this).closest('tr').data('id'));
+            }
+        });;
+    </script>
+
+    <script>
+
+
+        const MIN_WIDTH = 200; // Minimum width for the columns
+
+        document.querySelectorAll('.resizer').forEach(resizer => {
+            resizer.addEventListener('mousedown', function (e) {
+                e.preventDefault();
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+
+                const th = resizer.parentElement;
+                const startOffset = th.offsetWidth - e.pageX;
+
+                function onMouseMove(e) {
+                    const newWidth = startOffset + e.pageX;
+                    // Set the column width, ensuring it does not go below MIN_WIDTH
+                    th.style.width = Math.max(newWidth, MIN_WIDTH) + 'px';
+                }
+
+                function onMouseUp() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    document.removeEventListener('mouseup', onMouseUp);
+                }
+            });
+        });
+
+
+    </script>
+    <!-- @endsection -->
+</body>
+
+
+</html>

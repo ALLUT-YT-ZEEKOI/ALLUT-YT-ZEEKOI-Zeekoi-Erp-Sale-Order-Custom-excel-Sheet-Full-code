@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erp Ui</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Boostrap link -->
+    <link href="css/vendor.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <aside class="main-sidebar">Sidebar Content</aside>
+
+
+    <div class="main-conatiner">
+
+
+
+
+
+        <div style="position: sticky;top: 0;z-index: 1000;">
+            <div class="main-header">
+                <div class="main-header-leftside" style="display: flex;width:60%;">
+                    <div class="add-sale">Add Sale</div>
+                    <div class="location-container">
+                        <i class="bi bi-geo-alt-fill" style="font-size: 14px; padding-left: 6px;"></i>
+                        <div class="all-location">All locations</div>
+                        <div class="blue-container">
+                            <i class="bi bi-arrow-down" style="color: white; text-align: center; font-size: 12px;"></i>
+                        </div>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-menu" style="display: none;">
+                            <a href="#">Location 1</a>
+                            <a href="#">Location 2</a>
+                            <a href="#">Location 3</a>
+                        </div>
+                    </div>
+                    <div class="location-container">
+                        <i class="bi bi-geo-alt-fill" style="font-size: 14px; padding-left: 6px;"></i>
+                        <div class="all-location">Selling Price</div>
+                        <div class="blue-container">
+                            <i class="bi bi-arrow-down" style="color: white; text-align: center; font-size: 12px;"></i>
+                        </div>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-menu" style="display: none;">
+                            <a href="#">Location A</a>
+                            <a href="#">Location B</a>
+                            <a href="#">Location C</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header-rightside" style="display: flex;
+            justify-content: end;
+            width: 40%;
+            align-items: end;">
+                    <button class="saveas-btn">
+                        <div class="saveas-btn-text" style="width: 90px;color: rgb(0, 0, 0);">Save as Draft</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #0C3959;color: white;width: 115px;">
+                        <div class="saveas-btn-text">Save and Print</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #008D4C;color: rgb(255, 255, 255);width: 80px;">
+                        <div class="saveas-btn-text">Save</div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <!-- Customer Details -->
+        <div class="gap"></div>
+        <div class="container-fluid" style="padding: 30px;">
+            <div class="row">
+                <div class="col col-6">
+                    <div class="subhead-text">Invoice Details</div>
+
+
+
+
+                    <div class="customer-details-main-container">
+                        <div style="display: flex;justify-content: space-between; width: 100%;">
+                            <!-- customer details -->
+                            <div style="width: 60%;">
+
+
+                                <div class="subhead-text">Customer Details</div>
+                                <div class="search-container">
+
+                                    <i class="search-icon bi bi-search"></i>
+                                    <input type="text" id="searchBox" placeholder="Select or Add a Customer"
+                                        class="search-box">
+                                    <i class="dropdown-arrow bi bi-arrow-down"></i>
+                                    <div id="dropdownMenu" class="dropdown-content">
+                                        <div onclick="show_address_details();" class="drop_one">
+                                            <p class="text-customer-p">TestCustomer (9946051204)</p>
+                                            <p class="text-customer-p-p">TEST1234 Test Company</p>
+                                        </div>
+                                        <div class="drop_one">Drop One</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- payment method -->
+                            <div style="width: 28%;">
+
+
+                                <div class="subhead-text">Pay term</div>
+                                <div class="search-container_1">
+
+                                    <div id="searchBox_1" style="display: flex;align-items: center;">
+
+                                        <div
+                                            style="color: #646464; font-size: 10px; font-family: Poppins; font-weight: 400; word-wrap: break-word">
+                                            Pay term</div>
+
+                                        <div class="vertical-line"></div>
+
+                                        <div
+                                            style="color: #646464; font-size: 10px; font-family: Poppins; font-weight: 400; word-wrap: break-word">
+                                            Day</div>
+                                        <i class="dropdown-arrow bi bi-arrow-down"></i>
+                                    </div>
+                                    <!-- <input type="text" id="searchBox_1" placeholder="Pay term"  class="search-box_1"> -->
+
+
+
+                                    <div id="dropdownMenu_1" class="dropdown-content_1">
+                                        <a href="#">Drop One</a>
+                                        <a href="#">Drop Two</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- showing details -->
+                    <div id="address-details-dt" class="address-details-dt" style="margin-top: 10px;">
+
+
+
+                        <div style="margin:10px;">
+
+                            <div class="button-container">
+                                <button class="test-company">
+                                    Test Company <i class="bi bi-x"></i>
+                                </button>
+                                <div class="dialog-box">
+                                    <p>Amz Address p. o <i class="bi bi-pencil-square"></i> </p>
+                                </div>
+                            </div>
+
+                            <p class="sub_sub_address">Shipping Address : <span class="sub-txt"> Valiya Vilakom
+                                    Perumguzhi P. o </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- popup show box container -->
+
+
+
+
+
+
+                <div class="col col-6">
+                    <div class="subhead-text">Invoice Details</div>
+
+
+
+                    <div class="invoice-container">
+                        <div style="display: flex;justify-content: space-between;align-items: center;">
+
+
+
+                            <div class="subtext_1">
+                                Invoice No
+
+                                <input type="text" id="searchBox_invoice" placeholder="Select or Add a Customer" /
+                                    class="search-box">
+                            </div>
+                            <div class="subtext_1">
+                                Invoice Template
+
+
+
+                                <div class="custom-search-container">
+                                    <span class="customer_select">Select or Add a Customer</span>
+                                    <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                                    <div class="custom-dropdown-content">
+                                        <a href="#">Customer One</a>
+                                        <a href="#">Customer Two</a>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="subtext_1">
+                                Invoice Scheme
+
+                                <div class="custom-search-container">
+                                    <span class="customer_select">Select or Add Another Customer</span>
+                                    <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                                    <div class="custom-dropdown-content">
+                                        <a href="#">Customer Three</a>
+                                        <a href="#">Customer Four</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- sales invoce date -->
+
+
+                    <div class="invoice-container" style="margin-top: 15px;">
+                        <div style="display: flex;justify-content: space-between;align-items: center;">
+                            <div class="subtext_1">
+                                Sale Date
+
+                                <div class="datepicker_0"
+                                    style="position: relative;border: 1px solid rgba(105, 102, 102, 0.5);padding: 0px; width: 95%;">
+                                    <input type="text" name="" id="date_0" class="ctm-input" placeholder="choose date">
+                                </div>
+                            </div>
+                            <div class="subtext_1">
+                                Delivery Date
+
+
+
+                                <div class="datepickerr"
+                                    style="position: relative;border: 1px solid rgba(105, 102, 102, 0.5);padding: 0px;width: 95%;">
+
+                                    <input type="text" name="" id="datee" class="ctm-input" placeholder="choose date">
+
+                                </div>
+
+
+
+                                <!-- <input type="text" id="searchBox_invoice" placeholder="Select or Add a Customer" /
+                                    class="search-box"> -->
+                            </div>
+                            <div class="subtext_1">
+                                Extended Delivery Date
+                                <div class="datepickerrr"
+                                    style="position: relative;border: 1px solid rgba(105, 102, 102, 0.5);padding: 0px;width: 95%;">
+                                    <input type="text" name="" id="dateee" class="ctm-input" placeholder="choose date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="subhead-text">Other Headers</div>
+            <div class="other-header" style="padding: 20px;">
+                <div style="display: flex;">
+
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container_8_7_77">
+                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container_8_7_77">
+                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtext_1">
+                        Invoice Template
+                        <div class="custom-search-container">
+                            <span class="customer_select">Select or Add Another Customer</span>
+                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                            <div class="custom-dropdown-content">
+                                <a href="#">Customer Three</a>
+                                <a href="#">Customer Four</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Excel Sheet Box -->
+            <div style="display: flex; justify-content: space-between; margin-top: 20px">
+                <div class="subhead-text">Other Headers</div>
+                <div style="display: flex; align-items: center;">
+                    <fieldset style="margin-right: 10px;">
+
+                        <div>
+                            <input type="checkbox" id="addColumnButton" name="interest" value="coding" />
+
+                            <label for="coding" class="dis">Show Description</label>
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <input type="checkbox" id="music" name="interest" value="music" />
+                            <label for="music" class="dis">Show Description</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+
+
+            <!-- exal main container -->
+
+
+
+
+            <div style="    width: 100%;
+            /* height: 300px; */
+            background: white;
+            border-radius: 9px;
+            border: 1px #C4C4C4 solid;
+            padding: 15px;">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!-- Table tr  -->
+
+
+                        <div style="    display: flex;
+                        justify-content: center;
+                        margin-top: 10px;
+                        margin-bottom: 23px;">
+
+                            <div class="scrollable-container">
+                                <!-- Content goes here -->
+
+
+
+                                <table id="myTable" border="1">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                style="width: 75px; border-right: none;border-bottom: none;position: static;">
+                                                <span class="table-head">
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+
+                                            <th style="width: 300px;border-left: none;"> <span
+                                                    class="table-head">Product
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 120px;"> <span class="table-head">Qty
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Remarks
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Unit Price
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width:250px;"><span class="table-head">Discount
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 250px;"><span class="table-head">Tax
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Price inc.tax
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                            <th style="width: 180px;"><span class="table-head">Subtotal
+
+                                                </span>
+                                                <div class="resizer"></div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                                <!-- ................................data rows ....................................................................-->
+
+                                <div class="search-container_in">
+                                    <button class="add_the_main_row" onclick="createMainDataRow()">+ Add</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- .......................................................................................................... -->
+
+
+
+
+
+
+                        <div class=" col col-6">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="discount-box">
+
+                                <div style="display: flex;">
+                                    <div class="subtext_1">
+                                        Invoice Template
+                                        <div class="custom-search-container_8_7_77">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="subtext_1">
+                                        Invoice Template
+                                        <div class="custom-search-container_8_7_77">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="subtext_1">
+                                        Invoice Template
+                                        <div class="custom-search-container_8_7_77">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subtext_1" style="margin-top: 10px;">
+                                    Sell Note
+                                </div>
+                                <textarea class="test-area" placeholder="Enter your test here..."></textarea>
+                            </div>
+                        </div>
+                        <div class="col col-6">
+                            <div class="discount-box_2">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="sub">Sub total</div>
+                                    <div class="sub">0</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;margin-top:10px ;">
+                                    <div class="sub_1" style="margin-bottom:10px ;">Discount</div>
+                                    <div class="sub">0</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="subtext_1">
+                                        <div class="custom-search-container">
+                                            <span class="customer_select">Select or Add Another Customer</span>
+                                            <i class="custom-dropdown-arrow bi bi-arrow-down"></i>
+
+                                            <div class="custom-dropdown-content">
+                                                <a href="#">Customer Three</a>
+                                                <a href="#">Customer Four</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sub">0</div>
+                                </div>
+
+                                <div style="display: flex;margin-top:10px ;">
+
+                                    <div class="subtext_1">
+
+                                        <div class="custom-search-container_8_7_777">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+                                        </div>
+                                    </div>
+                                    <div class="subtext_1">
+
+                                        <div class="custom-search-container_8_7_777">
+                                            <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="sub">0</div>
+                                </div>
+
+                                <div
+                                    style="width: 100%; height: 1px;margin-top:10px ;margin-bottom:10px ; background: white; border-radius: 3.11px">
+                                </div>
+
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="total-amt">Total Payable ( ₹ )</div>
+                                    <div class="sub">0</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping details -->
+
+            <div class="container-fluid" style="margin-top: 10px;">
+                <div class="row">
+                    <div class="col col-6">
+                        <div class="subhead-text" style="margin-bottom: 10px;margin-top : 10px;">Shipping Details
+                        </div>
+                        <div class="shiping-details">
+
+                            <div style="display: flex;">
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subtext_1" style="margin-top: 10px;">
+                                Sell Note
+                            </div>
+                            <textarea class="test-area" placeholder="Enter your test here..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="col col-6">
+                        <div class="subhead-text" style="margin-bottom: 10px;margin-top : 10px;">Shipping Details
+                        </div>
+                        <div class="shiping-details">
+
+                            <div style="display: flex;">
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="subtext_1">
+                                    Invoice Template
+                                    <div class="custom-search-container_8_7_77">
+                                        <span class="customer_select_8_7_7"> auto generate</span>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subtext_1" style="margin-top: 10px;">
+                                Sell Note
+                            </div>
+                            <textarea class="test-area" placeholder="Enter your test here..."></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div style="height: 50px;"></div>
+        <div style="position: sticky;bottom: 0;z-index: 1000;">
+            <div class="main-header">
+                <div class="main-header-leftside" style="display: flex;width:60%;">
+                    <div class="add-sale">tootal</div>
+
+                    <div class="add-sale"> ₹300</div>
+                </div>
+                <div class="main-header-rightside" style="display: flex;
+            justify-content: end;
+            width: 40%;
+            align-items: end;">
+                    <button class="saveas-btn">
+                        <div class="saveas-btn-text" style="width: 90px;color: rgb(0, 0, 0);">Save as Draft</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #0C3959;color: white;width: 115px;">
+                        <div class="saveas-btn-text">Save and Print</div>
+                    </button>
+                    <button class="saveas-btn" style="background: #008D4C;color: rgb(255, 255, 255);width: 80px;">
+                        <div class="saveas-btn-text">Save</div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 
+    <div class="context-menu" id="contextMenu">
+        <ul>
+            <li id="freezeUnfreezeMenuItem" onclick="freezeColumn()">Freeze Column</li>
+        </ul>
+    </div> -->
+    <div id="contextMenu_1" class="context-menu" style="display: none;">
+        <ul>
+            <li id="deleteRow">Delete Row</li>
+
+        </ul>
+    </div>
+
+
+    <!-- Boostrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $('#date_0').datepicker({
+            autoclose: true, container: '.datepicker_0'
+
+        })
+        $('#datee').datepicker({
+            autoclose: true, container: '.datepickerr'
+
+        })
+        $('#dateee').datepicker({
+            autoclose: true, container: '.datepickerrr'
+
+        })
+    </script>
+
+    <style>
+        #myTable th,
+        #myTable td {
+            text-align: left;
+            /* Align text to the left */
+        }
+
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            /* Ensure column width is fixed */
+        }
+
+        th,
+        td {
+            border-right: none;
+            border-left: none;
+            padding-left: 8px;
+            border: 1px solid #ddd;
+            /* padding: 8px; */
+            text-align: left;
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 300px;
+            color: '#1E1E1E';
+            font-size: 13.82;
+            font-family: 'Poppins';
+            color: #646464;
+            font-size: 13px;
+            font-family: Poppins;
+            font-weight: 500;
+            word-wrap: break-word;
+            font-weight: '500';
+            color: #000000;
+            font-size: 12px;
+            font-family: Poppins;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #00000000;
+            position: relative;
+            border-top: 1px solid #dddddd00;
+            border-right: 1px solid #cbc5c5fa;
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #dddddd00;
+
+        }
+    </style>
+</body>
+
+</html>
